@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login - Sistema</title>
+    <link rel="stylesheet" href="/css/login.css" />
+  </head>
+  <body>
+    <div class="login-container">
+      <div class="login-box">
+        <div class="logo">
+          <img src="/img/logo.png" alt="Logo de la empresa" />
+        </div>
+        <h2>Iniciar Sesión</h2>
+
+        <div id="mensaje" class="mensaje"></div>
+
+        <form id="loginForm">
+          <input
+            type="text"
+            name="nombre_usuario"
+            placeholder="Usuario"
+            required
+          />
+          <input
+            type="password"
+            name="password"
+            placeholder="Contraseña"
+            required
+          />
+          <button type="submit">Acceder</button>
+        </form>
+
+        <form id="recuperarForm" style="display: none">
+          <h3>Recuperar Contraseña</h3>
+          <input
+            type="email"
+            name="email"
+            placeholder="Correo registrado"
+            required
+          />
+          <button type="submit">Enviar correo</button>
+        </form>
+
+        <p><a href="/registrar">Registrar nuevo usuario</a></p>
+      </div>
+    </div>
+
+    <script>
+      const loginForm = document.getElementById("loginForm");
+      const recuperarForm = document.getElementById("recuperarForm");
+      const mensajeDiv = document.getElementById("mensaje");
+
+      loginForm.addEventListener("submit", async (e) => {
+        e.preventDefault();
+        const formData = new FormData(loginForm);
+        const data = Object.fromEntries(formData.entries());
+
+        const res = await fetch("/login", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(data),
+        });
+
+        const result = await res.json();
+        mensajeDiv.textContent = result.message;
+
+        if (result.success) {
+          localStorage.setItem("rol", result.rol);
+          window.location.href = "/dashboard";
+        } else if (result.recovery) {
+          loginForm.style.display = "none";
+          recuperarForm.style.display = "block";
+        }
+      });
+
+      recuperarForm.addEventListener("submit", async (e) => {
+        e.preventDefault();
+        const formData = new FormData(recuperarForm);
+        const data = Object.fromEntries(formData.entries());
+
+        const res = await fetch("/recuperar", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(data),
+        });
+
+        const result = await res.json();
+        mensajeDiv.textContent = result.message;
+      });
+    </script>
+  </body>
+</html>

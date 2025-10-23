@@ -1,0 +1,32 @@
+[
+  {
+    "nombre_usuario": "admin",
+    "password": "1234",
+    "rol": "administrador",
+    "email": "admin@instituto.edu"
+  },
+  {
+    "nombre_usuario": "maria",
+    "password": "abcd",
+    "rol": "docente",
+    "email": "maria@instituto.edu"
+  },
+  {
+    "nombre_usuario": "juan",
+    "password": "NuevaPass123",
+    "rol": "alumno",
+    "email": "juan@instituto.edu"
+  },
+  {
+    "nombre_usuario": "mara",
+    "email": "marajaime@gmail.com",
+    "password": "Mara1234*",
+    "rol": "alumno"
+  },
+  {
+    "nombre_usuario": "tito",
+    "email": "tito@gmail.com",
+    "password": "Tito1234*",
+    "rol": "alumno"
+  }
+]

@@ -1,0 +1,92 @@
+[
+  {
+    "id": 1,
+    "fechaIngreso": "2025-10-12T19:40:47.944Z",
+    "usuarioLogueado": "admin"
+  },
+  {
+    "id": 2,
+    "fechaIngreso": "2025-10-12T19:44:13.739Z",
+    "usuarioLogueado": "maria"
+  },
+  {
+    "id": 3,
+    "fechaIngreso": "2025-10-12T19:44:30.005Z",
+    "usuarioLogueado": "juan"
+  },
+  {
+    "id": 4,
+    "fechaIngreso": "2025-10-12T20:21:21.250Z",
+    "usuarioLogueado": "admin"
+  },
+  {
+    "id": 5,
+    "fechaIngreso": "2025-10-12T20:45:07.468Z",
+    "usuarioLogueado": "admin"
+  },
+  {
+    "id": 6,
+    "fechaIngreso": "2025-10-12T21:03:40.576Z",
+    "usuarioLogueado": "admin"
+  },
+  {
+    "id": 7,
+    "fechaIngreso": "2025-10-12T21:20:07.367Z",
+    "usuarioLogueado": "admin"
+  },
+  {
+    "id": 8,
+    "fechaIngreso": "2025-10-13T03:35:16.578Z",
+    "usuarioLogueado": "admin"
+  },
+  {
+    "id": 9,
+    "fechaIngreso": "2025-10-13T04:27:04.504Z",
+    "usuarioLogueado": "juan"
+  },
+  {
+    "id": 10,
+    "fechaIngreso": "2025-10-13T04:39:24.003Z",
+    "usuarioLogueado": "juan"
+  },
+  {
+    "id": 11,
+    "fechaIngreso": "2025-10-13T04:39:37.100Z",
+    "usuarioLogueado": "juan"
+  },
+  {
+    "id": 12,
+    "fechaIngreso": "2025-10-13T04:48:32.011Z",
+    "usuarioLogueado": "juan"
+  },
+  {
+    "id": 13,
+    "fechaIngreso": "2025-10-13T04:56:13.445Z",
+    "usuarioLogueado": "juan"
+  },
+  {
+    "id": 14,
+    "fechaIngreso": "2025-10-14T23:25:42.612Z",
+    "usuarioLogueado": "admin"
+  },
+  {
+    "id": 15,
+    "fechaIngreso": "2025-10-14T23:25:53.994Z",
+    "usuarioLogueado": "maria"
+  },
+  {
+    "id": 16,
+    "fechaIngreso": "2025-10-14T23:26:07.907Z",
+    "usuarioLogueado": "juan"
+  },
+  {
+    "id": 17,
+    "fechaIngreso": "2025-10-14T23:28:49.854Z",
+    "usuarioLogueado": "juan"
+  },
+  {
+    "id": 18,
+    "fechaIngreso": "2025-10-14T23:32:19.789Z",
+    "usuarioLogueado": "admin"
+  }
+]

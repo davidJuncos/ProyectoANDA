@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="/css/login.css" />
+    <style>
+      /* Estilos generales */
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        overflow: hidden;
+        background-color: #f0f0f0;
+      }
+
+      /* Contenedor principal */
+      .dashboard-container {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column; /* Coloca elementos en columna */
+        justify-content: space-between; /* Distribuye espacio entre elementos */
+        align-items: center; /* Centra horizontalmente */
+        text-align: center;
+        background-size: 80% auto;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-color: #000;
+        padding: 20px 0; /* Espacio superior e inferior */
+      }
+
+      /* Título y rol */
+      .dashboard-top {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      h2 {
+        color: #fff;
+        text-shadow: 2px 2px 5px #000;
+        margin: 0;
+      }
+
+      #rolUsuario {
+        color: #fff;
+        font-size: 1.2em;
+        text-shadow: 1px 1px 3px #000;
+        margin-top: 10px;
+      }
+
+      #logoutBtn {
+        padding: 10px 20px;
+        font-size: 1em;
+        background-color: #051d4d; /* Azul oscuro */
+        color: white;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        margin-bottom: 5px; /* separación desde abajo */
+      }
+
+      #logoutBtn:hover {
+        background-color: #030f2a; /* Azul más intenso al pasar el mouse */
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="dashboard-container" id="dashboardContainer">
+      <!-- Sección superior -->
+      <div class="dashboard-top">
+        <h2>Bienvenido a A.N.D.A.</h2>
+        <p id="rolUsuario"></p>
+      </div>
+
+      <!-- Botón inferior -->
+      <button id="logoutBtn">Cerrar Sesión</button>
+    </div>
+
+    <script>
+      const rolUsuario = document.getElementById("rolUsuario");
+      const logoutBtn = document.getElementById("logoutBtn");
+      const dashboard = document.getElementById("dashboardContainer");
+
+      // Recuperar el rol del localStorage
+      const rol = localStorage.getItem("rol") || "Usuario";
+      rolUsuario.textContent = "Rol: " + rol;
+
+      // Cambiar fondo según el rol
+      if (rol.toLowerCase() === "docente") {
+        dashboard.style.backgroundImage = "url('/img/Docente.png')";
+      } else if (rol.toLowerCase() === "alumno") {
+        dashboard.style.backgroundImage = "url('/img/Alumno.png')";
+      } else {
+        dashboard.style.backgroundImage = "url('/img/fondo_generico.png')";
+      }
+
+      // Botón cerrar sesión
+      logoutBtn.addEventListener("click", () => {
+        localStorage.removeItem("rol");
+        window.location.href = "/";
+      });
+    </script>
+  </body>
+</html>

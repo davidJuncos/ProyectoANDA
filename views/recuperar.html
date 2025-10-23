@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Recuperar Usuario</title>
+    <link rel="stylesheet" href="/css/login.css" />
+  </head>
+  <body>
+    <div class="login-container">
+      <div class="login-box">
+        <div class="logo">
+          <img src="/img/logo.png" alt="Logo de la empresa" />
+        </div>
+        <h2>Recuperar Usuario</h2>
+        <form action="/recuperar" method="POST">
+          <input
+            type="email"
+            name="email"
+            placeholder="Correo electrónico"
+            required
+          />
+          <button type="submit">Recuperar</button>
+        </form>
+        <p><a href="/">Volver al login</a></p>
+      </div>
+    </div>
+  </body>
+</html>
